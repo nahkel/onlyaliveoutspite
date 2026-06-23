@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Nahkel Skylar Video Archive</title>
+    <meta
+      name="description"
+      content="Nahkel Skylar's editable 90s-style videography archive."
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="top-bar">
+      <span class="header-label">archive*</span>
+      <nav aria-label="site links">
+        <a href="#videos">videos</a>
+        <a href="#contact">social media</a>
+        <a href="#art">art</a>
+        <a href="#music">music</a>
+        <a href="https://youtube.com/@cff0cc270?si=4SB6JAKdYZ-aps9u" target="_blank" rel="noreferrer">youtube</a>
+      </nav>
+    </header>
+
+    <main id="top" class="page-shell">
+      <aside class="left-column" aria-label="site notes">
+        <section class="box intro-box">
+          <p class="intro-text">
+            videography, edits, shows, memory fragments, footage, proof of
+            life. blue links turn green but boxes stay plain. everything here
+            is from my mind on display for you.
+          </p>
+        </section>
+
+        <section class="box update-box">
+          <h2>site updates</h2>
+          <ul>
+            <li>youtube channel fetched: <strong>11 videos</strong></li>
+            <li>music player waits for your uploaded track</li>
+            <li>edit videos in <code>script.js</code></li>
+            <li>edit colors/layout in <code>styles.css</code></li>
+          </ul>
+        </section>
+
+        <section class="box" id="music">
+          <h2>music player</h2>
+          <div class="winamp-player" data-player>
+            <div class="winamp-titlebar">
+              <span>archive sound selections</span>
+              <div class="window-buttons" aria-hidden="true">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+            <canvas
+              class="winamp-visualizer"
+              data-visualizer
+              width="220"
+              height="64"
+              aria-label="music visualization"
+            ></canvas>
+            <div class="winamp-readout">
+              <span data-track-status>waiting for site-track.mp3</span>
+              <span data-track-time>0:00 / 0:00</span>
+            </div>
+            <div class="winamp-progress" data-seek>
+              <span data-progress></span>
+            </div>
+            <div class="winamp-controls">
+              <button type="button" data-player-play>▶ play</button>
+              <button type="button" data-player-stop>■ stop</button>
+            </div>
+            <audio data-audio preload="metadata">
+              <source src="assets/music/site-track.mp3" type="audio/mpeg" />
+            </audio>
+          </div>
+          <p class="small">track path: <a href="assets/music/site-track.mp3">assets/music/site-track.mp3</a></p>
+        </section>
+      </aside>
+
+      <section class="main-column">
+        <section class="box marquee-box" aria-label="page banner">
+          <p>
+            * welcome to my portfolio! :L * all my work is listed here *
+            feel free to browse my videography * my art work * my sound
+            selections *
+          </p>
+        </section>
+
+        <div class="archive-row">
+          <section class="box" id="videos">
+            <div class="section-head">
+              <h2>videography</h2>
+              <p>explore a mindfreak</p>
+            </div>
+            <div id="video-list" class="video-list" aria-live="polite"></div>
+          </section>
+
+          <aside class="right-rail" aria-label="right side extras">
+            <section class="box gif-box">
+              <div class="gif-placeholder">
+                <img
+                  src="assets/gir-dancing.gif"
+                  alt="Gir dancing gif placeholder"
+                  onerror="this.style.display='none'; this.nextElementSibling.style.display='block';"
+                />
+                <p>
+                  add your Gir dancing gif here:<br />
+                  <code>assets/gir-dancing.gif</code>
+                </p>
+              </div>
+            </section>
+
+            <section class="box" id="contact">
+              <div class="section-head stacked">
+                <h2>social media</h2>
+                <p>contact / links</p>
+              </div>
+              <div class="contact-list">
+                <a href="https://www.instagram.com/twofacedangel_puresoulmonster?igsh=NTc4MTIwNjQ2YQ%3D%3D&utm_source=qr" target="_blank" rel="noreferrer">instagram</a>
+                <a href="https://www.tiktok.com/@nahkel.mp4?_r=1&_t=ZP-97SXB1Jm3DT" target="_blank" rel="noreferrer">tiktok</a>
+                <a href="https://discord.gg/J4w4kP6buE" target="_blank" rel="noreferrer">discord community</a>
+                <a href="mailto:sickboydori@gmail.com">contact me: sickboydori@gmail.com</a>
+              </div>
+            </section>
+          </aside>
+        </div>
+
+        <section class="box" id="art">
+          <div class="section-head">
+            <h2>art works / page objects</h2>
+            <p>temporary archive art, replace anytime.</p>
+          </div>
+          <div class="art-grid">
+            <figure>
+              <img src="assets/archive-art-1.png" alt="Lo-fi web archive collage with CRT and VHS textures" />
+              <figcaption>archive-art-1.png</figcaption>
+            </figure>
+            <figure>
+              <img src="assets/archive-art-2.png" alt="Lo-fi videography collage with film and xerox textures" />
+              <figcaption>archive-art-2.png</figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <section class="box edit-note">
+          <h2>how to edit this later</h2>
+          <p>
+            Add videos by copying a video object in <code>script.js</code>. Add
+            art by dropping images in <code>assets/</code> and making a new
+            <code>&lt;figure&gt;</code>. Add music by placing a file in
+            <code>assets/music/</code> and updating the audio source.
+          </p>
+        </section>
+      </section>
+    </main>
+
+    <footer class="footer-box">
+      <span>last updated locally</span>
+      <a href="#top">back to top</a>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,6 +1,6 @@
 # Portfolio Site Progress
 
-Last updated: 2026-06-24 10:00 PDT
+Last updated: 2026-06-24 10:03 PDT
 
 ## What changed
 
@@ -53,6 +53,8 @@ Last updated: 2026-06-24 10:00 PDT
 - Cleared the stuck legacy Pages deployment and confirmed the Actions deployment succeeded.
 - Verified the live site returns HTTP 200 and contains the expected `archive*` content.
 - Removed the `site updates` box from the left column.
+- Removed the `how to edit this later` box.
+- Changed the page title and meta description to `nahkel's portfolio`.
 
 ## Unfinished
 

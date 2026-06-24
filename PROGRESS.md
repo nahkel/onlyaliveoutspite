@@ -1,6 +1,6 @@
 # Portfolio Site Progress
 
-Last updated: 2026-06-23 14:48 PDT
+Last updated: 2026-06-24 09:40 PDT
 
 ## What changed
 
@@ -44,12 +44,15 @@ Last updated: 2026-06-23 14:48 PDT
 - Confirmed GitHub CLI is installed, but it is not logged in yet in this OpenClaw session.
 - Excluded local MP3 files from the public Git repo until the final publish-safe music track is chosen.
 - Initialized `portfolio-site` as its own Git repo on branch `main`.
-- Created local publish commit `2331ab6` for the site files.
+- Created local publish base commit `960e9f3` for the site files.
+- Latest local commit includes the refreshed publish progress note.
+- Re-checked publishing on 2026-06-24; repo is clean on `main`, has no remote yet, and GitHub CLI is still not authenticated.
 
 ## Unfinished
 
 - Winamp-style music player still needs a publish-safe final audio file at `assets/music/site-track.mp3`, or the source in `index.html` needs to be changed to the chosen file name.
 - Site is ready locally but not published yet because `gh auth status` reports no logged-in GitHub account.
+- Publish target is still a new public GitHub repo named `onlyaliveoutspite`.
 - Domain is not connected yet. `onlyaliveoutspite` is the desired site/domain name, but a full custom domain still needs an ending such as `.com`, `.net`, `.site`, etc.
 - YouTube embeds may not fully play from local `file://`; this should be re-tested after hosting.
 - Artwork panels are placeholders and can be replaced with final art.
@@ -61,7 +64,7 @@ Last updated: 2026-06-23 14:48 PDT
 1. Add the final music file to `assets/music/`.
 2. Re-test the music player locally.
 3. Log into GitHub CLI with `gh auth login` in the OpenClaw/PC environment.
-4. Publish commit `2331ab6` from `portfolio-site/` to a public GitHub repo named `onlyaliveoutspite`.
+4. Publish the latest local commit from `portfolio-site/` to a public GitHub repo named `onlyaliveoutspite`.
 5. Test YouTube playback on the hosted URL.
 6. Choose or confirm a domain name.
 7. Connect domain DNS to the host.

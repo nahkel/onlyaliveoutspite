@@ -1,6 +1,6 @@
 # Portfolio Site Progress
 
-Last updated: 2026-06-24 10:25 PDT
+Last updated: 2026-06-24 10:47 PDT
 
 ## What changed
 
@@ -58,6 +58,7 @@ Last updated: 2026-06-24 10:25 PDT
 - Removed the `temporary archive art, replace anytime.` line from the art section.
 - Updated the music player so it uses a random playlist list from `script.js` instead of a fixed `<source>` tag.
 - Added both local MP3 files to the publish playlist and removed the MP3 git ignore rule so they can be served by GitHub Pages.
+- Renamed the player title from `archive sound selections` to `sound selections`.
 
 ## Unfinished
 

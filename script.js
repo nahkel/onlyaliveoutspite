@@ -84,6 +84,10 @@ const musicTracks = [
     title: "site-track.mp3",
     src: "assets/music/site-track.mp3",
   },
+  {
+    title: "Disintegration (2010 Remaster) 4.mp3",
+    src: "assets/music/Disintegration%20%282010%20Remaster%29%204.mp3",
+  },
 ];
 const audio = document.querySelector("[data-audio]");
 const playButton = document.querySelector("[data-player-play]");

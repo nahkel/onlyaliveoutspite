@@ -1,6 +1,6 @@
 # Portfolio Site Progress
 
-Last updated: 2026-06-24 09:40 PDT
+Last updated: 2026-06-24 09:52 PDT
 
 ## What changed
 
@@ -46,13 +46,17 @@ Last updated: 2026-06-24 09:40 PDT
 - Initialized `portfolio-site` as its own Git repo on branch `main`.
 - Created local publish base commit `960e9f3` for the site files.
 - Latest local commit includes the refreshed publish progress note.
-- Re-checked publishing on 2026-06-24; repo is clean on `main`, has no remote yet, and GitHub CLI is still not authenticated.
+- Published the site to a public GitHub repo:
+  - `https://github.com/nahkel/onlyaliveoutspite`
+  - `https://nahkel.github.io/onlyaliveoutspite/`
+- Added a GitHub Actions Pages workflow after the first legacy Pages build failed.
+- Cleared the stuck legacy Pages deployment and confirmed the Actions deployment succeeded.
+- Verified the live site returns HTTP 200 and contains the expected `archive*` content.
 
 ## Unfinished
 
 - Winamp-style music player still needs a publish-safe final audio file at `assets/music/site-track.mp3`, or the source in `index.html` needs to be changed to the chosen file name.
-- Site is ready locally but not published yet because `gh auth status` reports no logged-in GitHub account.
-- Publish target is still a new public GitHub repo named `onlyaliveoutspite`.
+- Site is published on GitHub Pages at `https://nahkel.github.io/onlyaliveoutspite/`.
 - Domain is not connected yet. `onlyaliveoutspite` is the desired site/domain name, but a full custom domain still needs an ending such as `.com`, `.net`, `.site`, etc.
 - YouTube embeds may not fully play from local `file://`; this should be re-tested after hosting.
 - Artwork panels are placeholders and can be replaced with final art.
@@ -63,13 +67,11 @@ Last updated: 2026-06-24 09:40 PDT
 
 1. Add the final music file to `assets/music/`.
 2. Re-test the music player locally.
-3. Log into GitHub CLI with `gh auth login` in the OpenClaw/PC environment.
-4. Publish the latest local commit from `portfolio-site/` to a public GitHub repo named `onlyaliveoutspite`.
-5. Test YouTube playback on the hosted URL.
-6. Choose or confirm a domain name.
-7. Connect domain DNS to the host.
-8. Replace placeholder art if desired.
-9. Keep updating this file after each major change.
+3. Test YouTube playback on the hosted URL.
+4. Choose or confirm a full custom domain name.
+5. Connect domain DNS to GitHub Pages.
+6. Replace placeholder art if desired.
+7. Keep updating this file after each major change.
 
 ## Working rule
 

@@ -79,6 +79,12 @@ const videos = [
 ];
 
 const list = document.querySelector("#video-list");
+const musicTracks = [
+  {
+    title: "site-track.mp3",
+    src: "assets/music/site-track.mp3",
+  },
+];
 const audio = document.querySelector("[data-audio]");
 const playButton = document.querySelector("[data-player-play]");
 const stopButton = document.querySelector("[data-player-stop]");
@@ -93,6 +99,7 @@ let analyser;
 let sourceNode;
 let animationFrame;
 let visualizerTick = 0;
+let currentTrackIndex = -1;
 
 function youtubeUrl(video) {
   return video.type === "short"
@@ -290,7 +297,31 @@ function updateTime() {
   timeText.textContent = `${formatTime(audio.currentTime)} / ${formatTime(audio.duration)}`;
 }
 
+function pickRandomTrack() {
+  if (musicTracks.length === 1) return 0;
+
+  let nextIndex = currentTrackIndex;
+  while (nextIndex === currentTrackIndex) {
+    nextIndex = Math.floor(Math.random() * musicTracks.length);
+  }
+  return nextIndex;
+}
+
+function setTrack(index) {
+  const track = musicTracks[index];
+  currentTrackIndex = index;
+  audio.src = track.src;
+  audio.load();
+  statusText.textContent = `ready: ${track.title}`;
+  updateTime();
+}
+
+function currentTrackTitle() {
+  return musicTracks[currentTrackIndex]?.title || "random track";
+}
+
 playButton.addEventListener("click", async () => {
+  if (currentTrackIndex === -1) setTrack(pickRandomTrack());
   setupAudioGraph();
   await audioContext.resume();
 
@@ -315,27 +346,33 @@ seek.addEventListener("click", (event) => {
 
 audio.addEventListener("play", () => {
   playButton.textContent = "pause";
-  statusText.textContent = "playing site-track.mp3";
+  statusText.textContent = `playing: ${currentTrackTitle()}`;
   cancelAnimationFrame(animationFrame);
   drawVisualizer();
 });
 
 audio.addEventListener("pause", () => {
   playButton.textContent = "play";
-  statusText.textContent = audio.currentTime ? "paused" : "waiting for site-track.mp3";
+  statusText.textContent = audio.currentTime ? "paused" : `ready: ${currentTrackTitle()}`;
   cancelAnimationFrame(animationFrame);
   drawIdleVisualizer();
 });
 
-audio.addEventListener("ended", () => {
+audio.addEventListener("ended", async () => {
   playButton.textContent = "play";
-  statusText.textContent = "finished";
-  cancelAnimationFrame(animationFrame);
-  drawIdleVisualizer();
+  setTrack(pickRandomTrack());
+  statusText.textContent = `next: ${currentTrackTitle()}`;
+
+  try {
+    await audio.play();
+  } catch {
+    cancelAnimationFrame(animationFrame);
+    drawIdleVisualizer();
+  }
 });
 
 audio.addEventListener("error", () => {
-  statusText.textContent = "add site-track.mp3";
+  statusText.textContent = `missing: ${currentTrackTitle()}`;
   cancelAnimationFrame(animationFrame);
   drawIdleVisualizer();
 });
@@ -343,5 +380,6 @@ audio.addEventListener("error", () => {
 audio.addEventListener("timeupdate", updateTime);
 audio.addEventListener("loadedmetadata", updateTime);
 
+setTrack(pickRandomTrack());
 cancelAnimationFrame(animationFrame);
 drawIdleVisualizer();

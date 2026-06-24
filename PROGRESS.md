@@ -1,6 +1,6 @@
 # Portfolio Site Progress
 
-Last updated: 2026-06-24 10:07 PDT
+Last updated: 2026-06-24 10:18 PDT
 
 ## What changed
 
@@ -56,10 +56,11 @@ Last updated: 2026-06-24 10:07 PDT
 - Removed the `how to edit this later` box.
 - Changed the page title and meta description to `nahkel's portfolio`.
 - Removed the `temporary archive art, replace anytime.` line from the art section.
+- Updated the music player so it uses a random playlist list from `script.js` instead of a fixed `<source>` tag.
 
 ## Unfinished
 
-- Winamp-style music player still needs a publish-safe final audio file at `assets/music/site-track.mp3`, or the source in `index.html` needs to be changed to the chosen file name.
+- Winamp-style music player still needs publish-safe audio files committed to the repo. The current playlist starts with `assets/music/site-track.mp3`.
 - Site is published on GitHub Pages at `https://nahkel.github.io/onlyaliveoutspite/`.
 - Domain is not connected yet. `onlyaliveoutspite` is the desired site/domain name, but a full custom domain still needs an ending such as `.com`, `.net`, `.site`, etc.
 - YouTube embeds may not fully play from local `file://`; this should be re-tested after hosting.

@@ -168,16 +168,10 @@ h3 {
 }
 
 .small,
-.update-box li,
 .video-meta,
 figcaption {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 13px;
-}
-
-.update-box ul {
-  margin: 0;
-  padding-left: 18px;
 }
 
 audio {
@@ -520,7 +514,6 @@ figcaption {
   p,
   .intro-text,
   .small,
-  .update-box li,
   .video-meta,
   figcaption {
     font-size: 14px;

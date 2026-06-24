@@ -1,6 +1,6 @@
 # Portfolio Site Progress
 
-Last updated: 2026-06-24 09:52 PDT
+Last updated: 2026-06-24 10:00 PDT
 
 ## What changed
 
@@ -52,6 +52,7 @@ Last updated: 2026-06-24 09:52 PDT
 - Added a GitHub Actions Pages workflow after the first legacy Pages build failed.
 - Cleared the stuck legacy Pages deployment and confirmed the Actions deployment succeeded.
 - Verified the live site returns HTTP 200 and contains the expected `archive*` content.
+- Removed the `site updates` box from the left column.
 
 ## Unfinished
 

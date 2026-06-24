@@ -1,6 +1,6 @@
 # Portfolio Site Progress
 
-Last updated: 2026-06-24 10:03 PDT
+Last updated: 2026-06-24 10:07 PDT
 
 ## What changed
 
@@ -55,6 +55,7 @@ Last updated: 2026-06-24 10:03 PDT
 - Removed the `site updates` box from the left column.
 - Removed the `how to edit this later` box.
 - Changed the page title and meta description to `nahkel's portfolio`.
+- Removed the `temporary archive art, replace anytime.` line from the art section.
 
 ## Unfinished
 

@@ -1,6 +1,6 @@
 # Portfolio Site Progress
 
-Last updated: 2026-06-24 10:47 PDT
+Last updated: 2026-06-24 10:59 PDT
 
 ## What changed
 
@@ -47,8 +47,8 @@ Last updated: 2026-06-24 10:47 PDT
 - Created local publish base commit `960e9f3` for the site files.
 - Latest local commit includes the refreshed publish progress note.
 - Published the site to a public GitHub repo:
-  - `https://github.com/nahkel/onlyaliveoutspite`
-  - `https://nahkel.github.io/onlyaliveoutspite/`
+  - `https://github.com/nahkel/onlyaliveoutofspite`
+  - `https://nahkel.github.io/onlyaliveoutofspite/`
 - Added a GitHub Actions Pages workflow after the first legacy Pages build failed.
 - Cleared the stuck legacy Pages deployment and confirmed the Actions deployment succeeded.
 - Verified the live site returns HTTP 200 and contains the expected `archive*` content.
@@ -59,12 +59,15 @@ Last updated: 2026-06-24 10:47 PDT
 - Updated the music player so it uses a random playlist list from `script.js` instead of a fixed `<source>` tag.
 - Added both local MP3 files to the publish playlist and removed the MP3 git ignore rule so they can be served by GitHub Pages.
 - Renamed the player title from `archive sound selections` to `sound selections`.
+- Renamed the site/repo target to `onlyaliveoutofspite`.
+- Removed the bottom music-player helper text.
+- Added best-effort music autoplay on landing. Some browsers, especially mobile, may still require a tap before sound can play.
 
 ## Unfinished
 
 - Winamp-style music player now publishes both local MP3 files from `assets/music/`.
-- Site is published on GitHub Pages at `https://nahkel.github.io/onlyaliveoutspite/`.
-- Domain is not connected yet. `onlyaliveoutspite` is the desired site/domain name, but a full custom domain still needs an ending such as `.com`, `.net`, `.site`, etc.
+- Site is published on GitHub Pages at `https://nahkel.github.io/onlyaliveoutofspite/`.
+- Domain is not connected yet. `onlyaliveoutofspite` is the desired site/domain name, but a full custom domain still needs an ending such as `.com`, `.net`, `.site`, etc.
 - YouTube embeds may not fully play from local `file://`; this should be re-tested after hosting.
 - Artwork panels are placeholders and can be replaced with final art.
 - Contact/social section can be expanded with display names, icons, or descriptions later.

@@ -324,13 +324,29 @@ function currentTrackTitle() {
   return musicTracks[currentTrackIndex]?.title || "random track";
 }
 
-playButton.addEventListener("click", async () => {
-  if (currentTrackIndex === -1) setTrack(pickRandomTrack());
+async function startAudio() {
   setupAudioGraph();
   await audioContext.resume();
+  await audio.play();
+}
+
+async function tryAutoplay() {
+  try {
+    await audio.play();
+  } catch {
+    statusText.textContent = `ready: ${currentTrackTitle()}`;
+  }
+}
+
+playButton.addEventListener("click", async () => {
+  if (currentTrackIndex === -1) setTrack(pickRandomTrack());
 
   if (audio.paused) {
-    audio.play();
+    try {
+      await startAudio();
+    } catch {
+      statusText.textContent = "tap play again";
+    }
   } else {
     audio.pause();
   }
@@ -352,7 +368,8 @@ audio.addEventListener("play", () => {
   playButton.textContent = "pause";
   statusText.textContent = `playing: ${currentTrackTitle()}`;
   cancelAnimationFrame(animationFrame);
-  drawVisualizer();
+  if (analyser) drawVisualizer();
+  else drawIdleVisualizer();
 });
 
 audio.addEventListener("pause", () => {
@@ -385,5 +402,6 @@ audio.addEventListener("timeupdate", updateTime);
 audio.addEventListener("loadedmetadata", updateTime);
 
 setTrack(pickRandomTrack());
+tryAutoplay();
 cancelAnimationFrame(animationFrame);
 drawIdleVisualizer();
